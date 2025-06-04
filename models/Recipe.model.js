@@ -15,7 +15,7 @@ const recipeSchema = new mongoose.Schema({
     },
     level: {
         type: String,
-        enum: ["Easy Peasy", "Amateur Chef ", "UltraPro Chef "]
+        enum: ["Easy Peasy", "Amateur Chef", "UltraPro Chef"]
     },
     ingredients: {
         type: [String]
@@ -43,4 +43,4 @@ const recipeSchema = new mongoose.Schema({
 const Recipe = mongoose.model("Recipe", recipeSchema)
 
 //exporto el modelo
-MediaSourceHandle.exports = Recipe
+module.exports = Recipe

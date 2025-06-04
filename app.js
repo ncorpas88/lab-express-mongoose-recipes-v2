@@ -37,11 +37,11 @@ app.post("/recipes", (req, res) => {
         title: req.body.title,
         instructions: req.body.instructions,
         level: req.body.level,
-        ingrdients:req.body.ingrdients,
+        ingredients:req.body.ingredients,
         image: req.body.image,
         duration: req.body.duration,
         isArchived: req.body.isArchived,
-        created:req.body.create
+        created:req.body.created
     })
 
     .then((createdRecipe) => {
@@ -95,7 +95,7 @@ app.put("/recipes/:id", (req, res) => {
 //  Iteration 7 - Delete a Single Recipe
 //  DELETE  /recipes/:id route
 app.delete("/recipes/:id", (req, res) => {
-    Recipe.findByIdAndDelete(req.params.is)
+    Recipe.findByIdAndDelete(req.params.id)
         .then(() => {
             res.status(204)
         })
